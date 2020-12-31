@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../fonts/Poppins-Black.ttf) format("true type"),
+    url(../fonts/Poppins-Bold.ttf) format("true type"),
+    url(../fonts/Poppins-ExtraBold.ttf) format("true type"),
+    url(../fonts/Poppins-ExtraLight.ttf) format("true type"),
+    url(../fonts/Poppins-Light.ttf) format("true type"),
+    url(../fonts/Poppins-Medium.ttf) format("true type"),
+    url(../fonts/Poppins-Regular.ttf) format("true type"),
+    url(../fonts/Poppins-SemiBold.ttf) format("true type"),
+    url(../fonts/Poppins-Thin.ttf) format("true type");
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 2;
+}
+
+header .jumbotron-text {
+  text-align: center;
+}
+
+nav {
+  box-shadow: 0 10px 10px rgba(19, 18, 18, 0.24);
+  z-index: 3;
+}
+
+nav .navbar-color,
+nav .navbar-collapse {
+  background: #000;
+}
+
+nav .brand {
+  font-weight: 800;
+}
+
+nav .logo {
+  border-radius: 50%;
+}
+
+nav .nav-link {
+  color: #000;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.2s ease-in-out;
+}
+
+nav .nav-link:hover::after {
+  width: 100%;
+}
+
+nav .navbar-toggler,
+nav .navbar-toggler:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+section .title-jumbotron {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+section .info-jumbotron {
+  width: 30ch;
+}
+
+section .btn:focus {
+  box-shadow: none;
+}
+
+section .btn {
+  padding: 0.7rem 2rem;
+  background-color: rgb(0, 0, 0);
+  font-size: 1rem;
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section .btn:hover {
+  transform: translateY(10px);
+}
+
+.about {
+  height: 350px;
+}
+
+.best-photos .card {
+  border-color: #000;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.quote {
+  height: 350px;
+}
+
+.quote .btn-explore {
+  transform: scale(1);
+}
+
+.quote .btn-explore:hover {
+  transform: scale(0.95);
+}
+
+.about,
+.best-photos,
+.moment-photos,
+footer {
+  background-color: #000;
+}
+
+.btn-up {
+  bottom: 5%;
+  right: 5%;
+  z-index: 5;
+}
+
+.gallery .spinner-border {
+  width: 4rem;
+  height: 4rem;
+}
+
+.contribute-text {
+  width: 30ch;
+}
+
+.contribute form input:focus,
+.contribute form textarea:focus {
+  box-shadow: none;
+  border-color: #000;
+}
+
+.contribute .btn-send {
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.contribute .btn-send:hover {
+  transform: translateX(10px);
+}
+
+@media (min-width: 768px) {
+  header .jumbotron-text {
+    text-align: left;
+  }
+  nav .nav-link {
+    margin-left: 0;
+  }
+  section .title-jumbotron {
+    font-size: 3rem;
+  }
+  section .info-jumbotron {
+    font-size: 1.2rem;
+  }
+  .about-info,
+  .contribute-text {
+    width: 60ch;
+  }
+}
+
+@media (min-width: 1200px) {
+  section .info-jumbotron {
+    width: 50ch;
+  }
+}
